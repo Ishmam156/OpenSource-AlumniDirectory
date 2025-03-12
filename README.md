@@ -14,6 +14,7 @@ A customizable alumni directory website built with Next.js that allows education
 
 - Node.js 16.x or later
 - A Google Cloud Platform account
+- A PostgreSQL database (Vercel Postgres or your own instance)
 - An email account for sending notifications
 
 ## Setup Instructions
@@ -45,6 +46,7 @@ A customizable alumni directory website built with Next.js that allows education
    EMAIL_USER=your_email@example.com
    EMAIL_PASSWORD=your_email_app_password
    NOTIFICATION_EMAIL=notifications@yourdomain.com
+   DATABASE_URL=your_postgres_connection_string
    ```
    A sample has been provided in the repo.
 
@@ -64,7 +66,30 @@ A customizable alumni directory website built with Next.js that allows education
    
    Note: Regular Gmail passwords won't work for security reasons. You must use an App Password.
 
-5. **Set up the Google Sheet**
+5. **Set up PostgreSQL Database**
+   You have two options for setting up the PostgreSQL database:
+
+   **Option 1: Using Vercel Postgres (Recommended for Vercel deployments)**
+   - In your Vercel project dashboard, go to the Storage tab
+   - Click "Create Database"
+   - Select Postgres and follow the setup wizard
+   - Vercel will automatically add the DATABASE_URL to your environment variables
+
+   **Option 2: Your own PostgreSQL instance**
+   - Set up a PostgreSQL database on your preferred hosting platform
+   - Get the connection string in the format: `postgresql://user:password@host:port/database`
+   - Add it to your to your environment variables
+
+   **Create the usage tracking table**
+   Execute the following SQL command in your PostgreSQL database:
+   ```sql
+   CREATE TABLE search_stats (
+       id INTEGER PRIMARY KEY,
+       total_searches INTEGER DEFAULT 0
+   );
+   ```
+
+6. **Set up the Google Sheet**
    Create a sheet named 'Summary' with the following columns:
    - Batch (Column A)
    - Student Name (Column B)
