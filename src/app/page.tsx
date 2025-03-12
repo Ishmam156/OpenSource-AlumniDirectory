@@ -151,7 +151,7 @@ export default function Home() {
       <ToastContainer />
       <ScrollToTop />
       <div className="max-w-6xl mx-auto text-center flex-grow">
-        <h1 className="text-4xl font-bold text-[#a29abe] mb-8">IBA BBA Alumni Directory</h1>
+        <h1 className="text-4xl font-bold text-[#a29abe] mb-8">University Alumni Directory</h1>
         
         {/* Search Stats */}
         <div className="mb-8 text-gray-400">
@@ -245,10 +245,10 @@ export default function Home() {
         <div className="text-gray-400 text-sm mt-auto">
           <i>The directory is updated with information of batches starting from <b>1st</b> till <b>28th</b>.</i>
           <br />
-          <i>A special thank you to all the <b>admins in BBA Group</b> who helped out with the initial data collection!</i>
+          <i>A special thank you to all the <b>admins</b> who helped out with the initial data collection!</i>
           <br />
           <br />
-          <i>Made with love for the <b>IBA BBA</b> community❤️</i>
+          <i>Made with love for the <b>university</b> community❤️</i>
         </div>
 
         {/* Modals */}

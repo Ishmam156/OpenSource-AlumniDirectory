@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'IBA BBA Alumni Directory | University of Dhaka',
-  description: 'Search and connect with IBA BBA alumni across the world. Find alumni by name, batch, country, or organization. The official alumni directory for IBA BBA graduates.',
-  keywords: 'IBA, BBA, Alumni Directory, University of Dhaka, Business School, IBA Alumni Network, Bangladesh Business School',
-  authors: [{ name: 'IBA Alumni Association' }],
+  title: 'University Alumni Directory',
+  description: 'Search and connect with university alumni across the world. Find alumni by name, batch, country, or organization. The official alumni directory for graduates.',
+  keywords: 'Alumni Directory, University, Higher Education, Alumni Network, Academic Institution',
+  authors: [{ name: 'Alumni Association' }],
   openGraph: {
-    title: 'IBA BBA Alumni Directory | University of Dhaka',
-    description: 'Connect with IBA BBA alumni worldwide - Search by name, batch, country, or organization',
+    title: 'University Alumni Directory',
+    description: 'Connect with university alumni worldwide - Search by name, batch, country, or organization',
     type: 'website',
     locale: 'en_US',
-    siteName: 'IBA BBA Alumni Directory',
+    siteName: 'University Alumni Directory',
     images: [{
       url: '/thumbnail.jpg', // Correct path to your JPEG thumbnail
       width: 1200,
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IBA BBA Alumni Directory | University of Dhaka',
-    description: 'Connect with IBA BBA alumni worldwide - Search by name, batch, country, or organization',
+    title: 'University Alumni Directory',
+    description: 'Connect with university alumni worldwide - Search by name, batch, country, or organization',
     images: ['/thumbnail.jpg']
   },
   robots: {
