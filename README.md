@@ -20,7 +20,7 @@ A customizable alumni directory website built with Next.js that allows education
 
 1. **Clone the repository**
    ```bash
-   git clone [your-repo-url]
+   git clone https://github.com/Ishmam156/OpenSource-AlumniDirectory.git
    cd opensource-alumni-website
    ```
 
