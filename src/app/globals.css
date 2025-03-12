@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  /* Base colors */
+  --clr-dark-a0: #000000;
+  --clr-light-a0: #ffffff;
+
+  /* Dark theme primary colors */
+  --clr-primary-a0: #322b6f;
+  --clr-primary-a10: #493f7e;
+  --clr-primary-a20: #5f558e;
+  --clr-primary-a30: #756b9e;
+  --clr-primary-a40: #8c82ae;
+  --clr-primary-a50: #a29abe;
+
+  /* Dark theme surface colors */
+  --clr-surface-a0: #121212;
+  --clr-surface-a10: #282828;
+  --clr-surface-a20: #3f3f3f;
+  --clr-surface-a30: #575757;
+  --clr-surface-a40: #717171;
+  --clr-surface-a50: #8b8b8b;
+
+  /* Dark theme tonal surface colors */
+  --clr-surface-tonal-a0: #16151b;
+  --clr-surface-tonal-a10: #2b2a30;
+  --clr-surface-tonal-a20: #424146;
+  --clr-surface-tonal-a30: #5a595e;
+  --clr-surface-tonal-a40: #737277;
+  --clr-surface-tonal-a50: #8d8d90;
+  
+  /* Semantic variables */
+  --background: var(--clr-surface-a0);
+  --foreground: var(--clr-light-a0);
+  --primary: var(--clr-primary-a0);
+  --primary-light: var(--clr-primary-a20);
+  --card-bg: var(--clr-surface-tonal-a10);
+  --input-bg: var(--clr-surface-a10);
+  --border-color: rgba(50, 43, 111, 0.3);
+  --text-primary: var(--clr-light-a0);
+  --text-secondary: var(--clr-surface-a50);
+  --text-tertiary: var(--clr-surface-a40);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Modern button and link styles */
+button, a {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modern form styles */
+input, select, textarea {
+  color: var(--text-primary);
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(50, 43, 111, 0.3);
+}
+
+::placeholder {
+  color: var(--text-tertiary);
+  opacity: 1;
+}
+
+/* Grid layout for cards */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .alumni-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .alumni-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
