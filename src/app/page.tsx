@@ -48,6 +48,8 @@ export default function Home() {
   const handleSearch = async () => {
     setLoading(true);
     setHasSearched(true);
+    setCurrentPage(1);
+    setAlumni([]);
     try {
       const params = new URLSearchParams();
       if (filters.name) params.append('name', filters.name);
